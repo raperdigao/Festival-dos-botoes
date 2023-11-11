@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
     <div id="manipula">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos error, magni dicta dolores ab illum officiis, praesentium voluptates sit at aliquid reprehenderit magnam velit voluptas? Hic minus sint exercitationem officia.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos error, magni dicta dolores ab illum
+            officiis, praesentium voluptates sit at aliquid reprehenderit magnam velit voluptas? Hic minus sint
+            exercitationem officia.</p>
 
         <p class="manipula">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore corporis asperiores dolor mollitia fugit blanditiis, consequuntur eveniet sint. Provident nemo impedit laborum vero! Commodi repudiandae culpa harum saepe? Consequatur, beatae.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore corporis asperiores dolor mollitia fugit
+            blanditiis, consequuntur eveniet sint. Provident nemo impedit laborum vero! Commodi repudiandae culpa harum
+            saepe? Consequatur, beatae.
 
         </p>
 
@@ -24,9 +32,13 @@
     </h2>
 
     <div id="botoes">
-        <input type="button" value="botão 01">
-        <input type="button" value="botão 02">
-        <input type="button" value="botão 03">
+
+
+        <!-- Função para atualizar a pagina onclick="window.location.reload-->
+        <input type="button" value="Atualizar Pagina" onclick="window.location.reload()">
+        <!-- Função para alterar o tamanho das fontes do paragrafos sempre colocar o parentese no sinal  -->
+        <input type="button" value="botão 02" onclick="mudaTamanhoFont()">
+        <input type="button" value="botão 03" onclick="mudaCorParagrafo()">
         <input type="button" value="botão 04">
         <input type="button" value="botão 05">
         <input type="button" value="botão 06">
@@ -42,8 +54,21 @@
         <input type="button" value="botão 16">
         <input type="button" value="botão 17">
         <input type="button" value="botão 18">
-        
-
     </div>
+
+    <script>
+    //    Função para trocar a fonte do paragrafo do id manipula
+    //    Função Padrão cammelcase no java script começa com minuscula e as primeira letras em maiuscula 
+
+        function mudaTamanhoFont() {
+            document.getElementById("manipula").style.fontSize = "36px";
+        }
+
+        function mudaCorParagrafo() {
+            document.getElementById("manipula").style.color = "blue";
+        }
+
+    </script>
 </body>
+
 </html>
