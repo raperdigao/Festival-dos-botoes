@@ -9,14 +9,23 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+<header class="container-grid banner">
+    <div class="banner-flex">
+        <div class="titulo">
+            <h1>Sprint - Java Script - Função onclick</h1>
+        </div>
+
+    </div>
+
+</header>
 
 <body>
-    <div id="manipula">
+    <div id="manipula" class="container-grid">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos error, magni dicta dolores ab illum
             officiis, praesentium voluptates sit at aliquid reprehenderit magnam velit voluptas? Hic minus sint
             exercitationem officia.</p>
 
-        <p class="manipula">
+        <p class="paragrafo">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore corporis asperiores dolor mollitia fugit
             blanditiis, consequuntur eveniet sint. Provident nemo impedit laborum vero! Commodi repudiandae culpa harum
             saepe? Consequatur, beatae.
@@ -26,39 +35,49 @@
     </div>
     <br>
     <hr>
-    <h2 class="chamada">
+    <h2 class="chamada" class="container-grid">
         Clique nos botões para execultar aguma função
 
     </h2>
+    <section class="container-grid botoes-flex">
 
-    <div id="botoes">
+
+        <div id="botoes">
 
 
-        <!-- Função para atualizar a pagina onclick="window.location.reload-->
-        <input type="button" value="Atualizar Pagina" onclick="window.location.reload()">
-        <!-- Função para alterar o tamanho das fontes do paragrafos sempre colocar o parentese no sinal  -->
-        <input type="button" value="Altera o tamanho do Paragrafo" onclick="mudaTamanhoFont()">
-        <input type="button" value="Altera a cor do Paragrafo" onclick="mudaCorParagrafo()">
-        <input type="button" value="botão 04">
-        <input type="button" value="botão 05">
-        <input type="button" value="botão 06">
-        <input type="button" value="botão 07">
-        <input type="button" value="botão 08">
-        <input type="button" value="botão 09">
-        <input type="button" value="botão 10">
-        <input type="button" value="botão 11">
-        <input type="button" value="botão 12">
-        <input type="button" value="botão 13">
-        <input type="button" value="botão 14">
-        <input type="button" value="botão 15">
-        <input type="button" value="botão 16">
-        <input type="button" value="botão 17">
-        <input type="button" value="botão 18">
-    </div>
+            <!-- Função para atualizar a pagina onclick="window.location.reload-->
+            <input type="button" value="Atualizar Pagina" onclick="window.location.reload()">
+            <!-- Função para alterar o tamanho das fontes do paragrafos sempre colocar o parentese no sinal  -->
+            <input type="button" value="Altera o tamanho do Paragrafo" onclick="mudaTamanhoFont()">
+            <input type="button" value="Altera a cor do Paragrafo" onclick="mudaCorParagrafo()">
+            <input type="button" value="Altera background" onclick="altBackground()">
+            <input type="button" value="Fonte itálico" onclick="fonteItalico()">
+            <input type="button" value="Fonte negrito" onclick="fontNegrito()">
+            <input type="button" value="Borda div" onclick="bordDiv()">
+            <input type="button" value="Remover borda" onclick="removeBorda()">
+            <input type="button" value="Esconder a div" onclick="displayNone()">
+            <input type="button" value="Visualizar a div" onclick="displayDiv()">
+            <input type="button" value="Alterar o texto h2" onclick="altTexth2()">
+            <input type="button" value="Backgrou class paragrafo" onclick="altClassparagrafo()">
+            <input type="button" value="Mudar cor de um botão" onclick="corBotao()">
+            <input type="button" value="Mudar cor botoes" onclick="altCorbotoes()">
+            <input type="button" value="Total botões" onclick="totalBotoes()">
+            <input type="button" value="Alterar paragrafo ***" onclick="altParafrago()">
+            <input type="button" value="Alterar backgroud body" onclick="backBody()">
+            <input type="button" value="Alterar Imagem" onclick="altImagem()">
+        </div>
 
+    </section>
+
+    <section class="container-grid">
+        <div class="imagem-laptop">
+            <img id="imagem" src="pc xuxa.png" alt="pcxuxa">
+        </div>
+
+    </section>
     <script>
-    //    Função para trocar a fonte do paragrafo do id manipula
-    //    Função Padrão cammelcase no java script começa com minuscula e as primeira letras em maiuscula 
+        //    Função para trocar a fonte do paragrafo do id manipula
+        //    Função Padrão cammelcase no java script começa com minuscula e as primeira letras em maiuscula 
 
         function mudaTamanhoFont() {
             document.getElementById("manipula").style.fontSize = "36px";
@@ -67,6 +86,80 @@
         function mudaCorParagrafo() {
             document.getElementById("manipula").style.color = "blue";
         }
+
+        function altBackground() {
+            document.getElementById("manipula").style.background = "black";
+        }
+
+        function fonteItalico() {
+            document.getElementById("manipula").style.fontStyle = "italic";
+        }
+
+        function fontNegrito() {
+            document.getElementById("manipula").style.fontWeight = "bold";
+        }
+
+        function bordDiv() {
+            document.getElementById("manipula").style.border = "2px solid black";
+        }
+
+        function removeBorda() {
+            document.getElementById("manipula").style.border = "0px";
+        }
+
+        function displayNone() {
+            document.getElementById("manipula").style.display = "none";
+        }
+        function displayDiv() {
+            document.getElementById("manipula").style.display = "block";
+        }
+
+        function altTexth2() {
+            document.getElementsByClassName("chamada")[0].innerHTML = "Não mexer neste botão"
+        }
+
+        function altClassparagrafo() {
+            document.getElementById("manipula").getElementsByClassName("paragrafo")[0].style.backgroundColor = "blue"
+        }
+
+        function corBotao() {
+            document.getElementsByTagName("input")[12].style.backgroundColor = "purple"
+        }
+
+        function altCorbotoes() {
+           const botao = document.getElementsByTagName("input")
+           for (let index = 0; index < botao.length; index++) {
+            botao[index].style.backgroundColor = "red";
+            
+           }
+        }
+
+        function totalBotoes() {
+            let numInputs = document.getElementsByTagName("input")
+
+            document.getElementById("manipula").innerHTML = numInputs.length
+        }
+
+        function altParafrago() {
+            document.getElementsByClassName("paragrafo")[0].innerHTML = "*****"
+        }
+
+        function backBody() {
+            document.querySelector("body").style.backgroundColor = "black"
+        }
+
+        function altImagem() {
+            let img = document.getElementById("imagem")
+
+            img.setAttribute('src', 'alienware.png')
+        }
+
+
+
+
+
+
+
 
     </script>
 </body>
